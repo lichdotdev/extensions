@@ -22,14 +22,13 @@ jobs:
         with:
           go-version-file: go.mod
       - run: go vet ./... && go test ./...
+      # shortcut: `lich extension check` is in no lich release yet; this builds lich from main until one ships it,
+      # then go back to `gh release download --repo lichdotdev/lich --pattern 'lich-*-linux-amd64.tar.zst'`.
       - name: Install lich
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir -p "$RUNNER_TEMP/lich"
-          gh release download --repo lichdotdev/lich --pattern 'lich-*-linux-amd64.tar.zst' --dir "$RUNNER_TEMP/lich"
-          tar --zstd -xf "$RUNNER_TEMP"/lich/lich-*-linux-amd64.tar.zst -C "$RUNNER_TEMP/lich"
-          echo "LICH_BIN=$RUNNER_TEMP/lich/lich" >> "$GITHUB_ENV"
+          git clone --quiet --depth 1 https://github.com/lichdotdev/lich "$RUNNER_TEMP/lich-src"
+          (cd "$RUNNER_TEMP/lich-src" && CGO_ENABLED=0 go build -o "$RUNNER_TEMP/lich" .)
+          echo "LICH_BIN=$RUNNER_TEMP/lich" >> "$GITHUB_ENV"
       - name: Build
         env:
           GITHUB_TOKEN: ${{ github.token }}
