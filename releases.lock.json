@@ -1,1 +1,13 @@
-{}
+{
+  "lich-notes@0.1.2": {
+    "commit": "7b2d72ec0fac695ca0a48da8507d93dc02546908",
+    "builds": {
+      "darwin_amd64": "4bc10f8710fd9693ebdb6d2b1f2a415f447b58d606b61c057fea45e9a61211dd",
+      "darwin_arm64": "54525fb0d9c74a13f8f604214c50a7e85d36274e9091ce720e072e82c32f4823",
+      "linux_amd64": "c8d7d38fbee10a0733c864068a591031ae59b4ea2610bc0e96c6b2c57f18b054",
+      "linux_arm64": "6838ae93a179cbd642b2c70268a1c5d8e6e7b0cee583d2154d3a437d7e8b22bd",
+      "windows_amd64": "da1e16fb935752f75e491a62250ae512f676c522552c69ea3d854aeb285873c8",
+      "windows_arm64": "20a40d21d671bc390b62bb3f0be4faef7fcc066a557ccaa4a5a2cc108de86de7"
+    }
+  }
+}

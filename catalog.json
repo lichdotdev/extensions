@@ -1,0 +1,117 @@
+{
+  "formatVersion": 1,
+  "generated": "2026-11-14T01:41:35Z",
+  "categories": [
+    {
+      "id": "agents",
+      "names": {
+        "en": "Agents",
+        "es": "Agentes",
+        "ja": "エージェント",
+        "ko": "에이전트",
+        "pt-br": "Agentes",
+        "ru": "Агенты",
+        "zh-cn": "智能体"
+      }
+    },
+    {
+      "id": "git",
+      "names": {
+        "en": "Git",
+        "es": "Git",
+        "ja": "Git",
+        "ko": "Git",
+        "pt-br": "Git",
+        "ru": "Git",
+        "zh-cn": "Git"
+      }
+    },
+    {
+      "id": "issues",
+      "names": {
+        "en": "Issues",
+        "es": "Issues",
+        "ja": "Issue",
+        "ko": "이슈",
+        "pt-br": "Issues",
+        "ru": "Задачи",
+        "zh-cn": "议题"
+      }
+    },
+    {
+      "id": "notes",
+      "names": {
+        "en": "Notes",
+        "es": "Notas",
+        "ja": "ノート",
+        "ko": "노트",
+        "pt-br": "Notas",
+        "ru": "Заметки",
+        "zh-cn": "笔记"
+      }
+    },
+    {
+      "id": "services",
+      "names": {
+        "en": "Services",
+        "es": "Servicios",
+        "ja": "サービス",
+        "ko": "서비스",
+        "pt-br": "Serviços",
+        "ru": "Сервисы",
+        "zh-cn": "服务"
+      }
+    },
+    {
+      "id": "tools",
+      "names": {
+        "en": "Tools",
+        "es": "Herramientas",
+        "ja": "ツール",
+        "ko": "도구",
+        "pt-br": "Ferramentas",
+        "ru": "Инструменты",
+        "zh-cn": "工具"
+      }
+    }
+  ],
+  "extensions": [
+    {
+      "id": "lich-notes",
+      "name": "LichNotes",
+      "description": "Browse, read and edit the Markdown notes in a folder of yours.",
+      "translations": {
+        "en": {
+          "name": "LichNotes",
+          "description": "Browse, read and edit the Markdown notes in a folder of yours."
+        },
+        "pt-br": {
+          "name": "LichNotes",
+          "description": "Navegue, leia e edite as notas em Markdown de uma pasta sua."
+        }
+      },
+      "publisher": "lichdotdev",
+      "official": true,
+      "stars": 0,
+      "repo": "https://github.com/lichdotdev/lich-notes",
+      "repoId": 1454721706,
+      "license": "AGPL-3.0",
+      "version": "0.1.2",
+      "tag": "v0.1.2",
+      "commit": "7b2d72ec0fac695ca0a48da8507d93dc02546908",
+      "released": "2026-11-14T01:04:03Z",
+      "categories": [
+        "notes"
+      ],
+      "glyph": "notebook-pen",
+      "builds": {
+        "darwin_amd64": "4bc10f8710fd9693ebdb6d2b1f2a415f447b58d606b61c057fea45e9a61211dd",
+        "darwin_arm64": "54525fb0d9c74a13f8f604214c50a7e85d36274e9091ce720e072e82c32f4823",
+        "linux_amd64": "c8d7d38fbee10a0733c864068a591031ae59b4ea2610bc0e96c6b2c57f18b054",
+        "linux_arm64": "6838ae93a179cbd642b2c70268a1c5d8e6e7b0cee583d2154d3a437d7e8b22bd",
+        "windows_amd64": "da1e16fb935752f75e491a62250ae512f676c522552c69ea3d854aeb285873c8",
+        "windows_arm64": "20a40d21d671bc390b62bb3f0be4faef7fcc066a557ccaa4a5a2cc108de86de7"
+      }
+    }
+  ]
+}
