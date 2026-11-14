@@ -1,0 +1,26 @@
+[
+  {
+    "id": "agents",
+    "names": { "en": "Agents", "pt-br": "Agentes", "es": "Agentes", "zh-cn": "智能体", "ja": "エージェント", "ko": "에이전트", "ru": "Агенты" }
+  },
+  {
+    "id": "git",
+    "names": { "en": "Git", "pt-br": "Git", "es": "Git", "zh-cn": "Git", "ja": "Git", "ko": "Git", "ru": "Git" }
+  },
+  {
+    "id": "issues",
+    "names": { "en": "Issues", "pt-br": "Issues", "es": "Issues", "zh-cn": "议题", "ja": "Issue", "ko": "이슈", "ru": "Задачи" }
+  },
+  {
+    "id": "notes",
+    "names": { "en": "Notes", "pt-br": "Notas", "es": "Notas", "zh-cn": "笔记", "ja": "ノート", "ko": "노트", "ru": "Заметки" }
+  },
+  {
+    "id": "services",
+    "names": { "en": "Services", "pt-br": "Serviços", "es": "Servicios", "zh-cn": "服务", "ja": "サービス", "ko": "서비스", "ru": "Сервисы" }
+  },
+  {
+    "id": "tools",
+    "names": { "en": "Tools", "pt-br": "Ferramentas", "es": "Herramientas", "zh-cn": "工具", "ja": "ツール", "ko": "도구", "ru": "Инструменты" }
+  }
+]

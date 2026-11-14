@@ -1,0 +1,66 @@
+name: pr
+
+# pull_request_target, not pull_request: a listing request comes from a fork,
+# and only this event's token can comment on it. It runs this repository's
+# own code from the base branch; the pull request's extensions.json is read as
+# data and nothing from its head is run.
+on:
+  pull_request_target:
+    paths: [extensions.json]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Install lich
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/lich"
+          gh release download --repo lichdotdev/lich --pattern 'lich-*-linux-amd64.tar.zst' --dir "$RUNNER_TEMP/lich"
+          tar --zstd -xf "$RUNNER_TEMP"/lich/lich-*-linux-amd64.tar.zst -C "$RUNNER_TEMP/lich"
+          echo "LICH_BIN=$RUNNER_TEMP/lich/lich" >> "$GITHUB_ENV"
+      - name: Check the added repositories
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          git fetch --quiet origin "pull/$PR/head"
+          git show FETCH_HEAD:extensions.json > "$RUNNER_TEMP/head.json"
+          added=$(jq -r --slurpfile base extensions.json \
+            '.[] | select(. as $r | $base[0] | index($r) | not)' "$RUNNER_TEMP/head.json")
+          status=0
+          : > "$RUNNER_TEMP/report.txt"
+          for repo in $added; do
+            go run ./cmd/catalog check "$repo" >> "$RUNNER_TEMP/report.txt" 2>&1 || status=1
+          done
+          [ -n "$added" ] || echo "No repository added." > "$RUNNER_TEMP/report.txt"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+      - name: Comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          STATUS: ${{ steps.check.outputs.status }}
+        run: |
+          marker='<!-- catalog-check -->'
+          verdict='Every added repository passes.'
+          [ "$STATUS" = 0 ] || verdict='Some checks fail: fix them in a new release, then push to this pull request to check again.'
+          body=$(printf '%s\n### Catalog check\n\n%s\n\n```\n%s\n```\n' "$marker" "$verdict" "$(cat "$RUNNER_TEMP/report.txt")")
+          id=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/$PR/comments" \
+            --jq ".[] | select(.user.login == \"github-actions[bot]\" and (.body | startswith(\"$marker\"))) | .id" | head -n 1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -f body="$body" > /dev/null
+          else
+            gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "$body"
+          fi
+      - if: steps.check.outputs.status != '0'
+        run: exit 1
