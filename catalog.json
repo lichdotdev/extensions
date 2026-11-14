@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-14T01:41:35Z",
+  "generated": "2026-11-14T02:57:51Z",
   "categories": [
     {
       "id": "agents",
@@ -96,21 +96,36 @@
       "repo": "https://github.com/lichdotdev/lich-notes",
       "repoId": 1454721706,
       "license": "AGPL-3.0",
-      "version": "0.1.2",
-      "tag": "v0.1.2",
-      "commit": "7b2d72ec0fac695ca0a48da8507d93dc02546908",
-      "released": "2026-11-14T01:04:03Z",
+      "version": "0.1.3",
+      "tag": "v0.1.3",
+      "commit": "47a2c1727dec3b70bfb865e25b15f6b3f1a83164",
+      "released": "2026-11-14T02:57:14Z",
       "categories": [
         "notes"
       ],
       "glyph": "notebook-pen",
+      "cover": "https://raw.githubusercontent.com/lichdotdev/lich-notes/47a2c1727dec3b70bfb865e25b15f6b3f1a83164/listing/cover.png",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/lichdotdev/lich-notes/47a2c1727dec3b70bfb865e25b15f6b3f1a83164/listing/screenshots/browse.png",
+          "alt": "A list of notes on the left, newest first, with the meeting note Sync with design open in Preview: headings, bullets and a task list with one item checked."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/lichdotdev/lich-notes/47a2c1727dec3b70bfb865e25b15f6b3f1a83164/listing/screenshots/split.png",
+          "alt": "Split mode on a daily note: the Markdown source in an editor on the left and the rendered headings and bullet list beside it on the right."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/lichdotdev/lich-notes/47a2c1727dec3b70bfb865e25b15f6b3f1a83164/listing/screenshots/edit.png",
+          "alt": "Edit mode on a Reading list note: the plain Markdown source fills the pane, with the Preview, Split and Edit switch and a Save button above it."
+        }
+      ],
       "builds": {
-        "darwin_amd64": "4bc10f8710fd9693ebdb6d2b1f2a415f447b58d606b61c057fea45e9a61211dd",
-        "darwin_arm64": "54525fb0d9c74a13f8f604214c50a7e85d36274e9091ce720e072e82c32f4823",
-        "linux_amd64": "c8d7d38fbee10a0733c864068a591031ae59b4ea2610bc0e96c6b2c57f18b054",
-        "linux_arm64": "6838ae93a179cbd642b2c70268a1c5d8e6e7b0cee583d2154d3a437d7e8b22bd",
-        "windows_amd64": "da1e16fb935752f75e491a62250ae512f676c522552c69ea3d854aeb285873c8",
-        "windows_arm64": "20a40d21d671bc390b62bb3f0be4faef7fcc066a557ccaa4a5a2cc108de86de7"
+        "darwin_amd64": "aa6e738164682abdfd933df1f0197eb8d8cbdc0b1189a7b383a45b88f95b8e8c",
+        "darwin_arm64": "6e6db1ca25746df6d7a7e1f3e9c439a521c32a12bacc945b2267d6769398dced",
+        "linux_amd64": "796ad9b22f9e5bb0dbdb085f2c1352b5ec4edace1b876a4eecd1468735df3f5b",
+        "linux_arm64": "838175510d8cdd40164a8eb10f208b514444aff72aab6ac7cf993436a200a198",
+        "windows_amd64": "1c8b217080d17f2575ea7f53281f697060245060bdf51529d87528fad2e68f0a",
+        "windows_arm64": "08c362f35b21715209216c58757015a8e6cf5c1906e188bc2d83d9726bb61a13"
       }
     }
   ]

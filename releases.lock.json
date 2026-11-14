@@ -9,5 +9,16 @@
       "windows_amd64": "da1e16fb935752f75e491a62250ae512f676c522552c69ea3d854aeb285873c8",
       "windows_arm64": "20a40d21d671bc390b62bb3f0be4faef7fcc066a557ccaa4a5a2cc108de86de7"
     }
+  },
+  "lich-notes@0.1.3": {
+    "commit": "47a2c1727dec3b70bfb865e25b15f6b3f1a83164",
+    "builds": {
+      "darwin_amd64": "aa6e738164682abdfd933df1f0197eb8d8cbdc0b1189a7b383a45b88f95b8e8c",
+      "darwin_arm64": "6e6db1ca25746df6d7a7e1f3e9c439a521c32a12bacc945b2267d6769398dced",
+      "linux_amd64": "796ad9b22f9e5bb0dbdb085f2c1352b5ec4edace1b876a4eecd1468735df3f5b",
+      "linux_arm64": "838175510d8cdd40164a8eb10f208b514444aff72aab6ac7cf993436a200a198",
+      "windows_amd64": "1c8b217080d17f2575ea7f53281f697060245060bdf51529d87528fad2e68f0a",
+      "windows_arm64": "08c362f35b21715209216c58757015a8e6cf5c1906e188bc2d83d9726bb61a13"
+    }
   }
 }
