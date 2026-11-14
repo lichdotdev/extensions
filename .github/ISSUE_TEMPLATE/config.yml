@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report privately
+    url: https://github.com/lichdotdev/lich/security/advisories/new
+    about: For a report that should not be public, such as a working exploit.

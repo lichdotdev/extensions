@@ -1,0 +1,37 @@
+name: Report an extension
+description: A listed extension that is malicious, deceptive, infringing or broken.
+title: "Report: "
+labels: [report]
+body:
+  - type: input
+    id: extension
+    attributes:
+      label: Repository
+      description: The listed extension's repository, as owner/repo.
+      placeholder: owner/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: What is wrong
+      options:
+        - It is malware or takes data it should not
+        - It does something other than its listing says
+        - It infringes a copyright or a trademark
+        - It does not install or does not work
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The version you saw it in, if you know it.
+  - type: textarea
+    id: details
+    attributes:
+      label: What you saw
+      description: What happened and how to see it again. Links, logs and screenshots help.
+    validations:
+      required: true
