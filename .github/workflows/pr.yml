@@ -39,8 +39,9 @@ jobs:
             '.[] | select(. as $r | $base[0] | index($r) | not)' "$RUNNER_TEMP/head.json")
           status=0
           : > "$RUNNER_TEMP/report.txt"
+          go build -o "$RUNNER_TEMP/catalog" ./cmd/catalog
           for repo in $added; do
-            go run ./cmd/catalog check "$repo" >> "$RUNNER_TEMP/report.txt" 2>&1 || status=1
+            "$RUNNER_TEMP/catalog" check "$repo" >> "$RUNNER_TEMP/report.txt" 2>&1 || status=1
           done
           [ -n "$added" ] || echo "No repository added." > "$RUNNER_TEMP/report.txt"
           echo "status=$status" >> "$GITHUB_OUTPUT"
