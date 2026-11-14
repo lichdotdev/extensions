@@ -47,6 +47,13 @@ The name and description are translated from `manifest.name` and `manifest.descr
   listed is left out until it passes.
 - The build fails, and commits nothing, when GitHub itself does not answer; the next run retries.
 
+## Reporting an extension
+
+[Report it](https://github.com/lichdotdev/extensions/issues/new?template=report.yml) with the repository, what is
+wrong and what you saw. A report that should not be public, such as a working exploit, goes through
+[private reporting](https://github.com/lichdotdev/lich/security/advisories/new) instead. A maintainer who confirms
+malware, deception or infringement takes the repository down, which also stops the copies already installed.
+
 ## Maintainer tasks
 
 **Confirm an identity.** A held entry saying its GitHub id changed waits for you. Make sure the repository is the
