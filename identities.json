@@ -2,5 +2,9 @@
   "lich-notes": {
     "repo": "https://github.com/lichdotdev/lich-notes",
     "repoId": 1454721706
+  },
+  "youtrack-lich": {
+    "repo": "https://github.com/omartelo/youtrack-lich",
+    "repoId": 1456107022
   }
 }

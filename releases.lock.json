@@ -20,5 +20,16 @@
       "windows_amd64": "1c8b217080d17f2575ea7f53281f697060245060bdf51529d87528fad2e68f0a",
       "windows_arm64": "08c362f35b21715209216c58757015a8e6cf5c1906e188bc2d83d9726bb61a13"
     }
+  },
+  "youtrack-lich@0.2.1": {
+    "commit": "1a69bb18a6ff4bc751c50e391a3fc903b3e648ec",
+    "builds": {
+      "darwin_amd64": "efbe523c5a311be02b6be7ca0e386fadddac530e9e988fc4166f4a1ead029375",
+      "darwin_arm64": "55b15c8179a667f2246c15c287dbdf960d47a04ef004c25a775c3687da035134",
+      "linux_amd64": "05e21514d5cade897e20004afb6c12a3d3813bef62ad69e9afdcf55bd43079ce",
+      "linux_arm64": "c3e52d380eaffc604c11ebea803b47d05d8562310fc9028276b6c8b852b9d342",
+      "windows_amd64": "901593be72c2921499eabec0bedff19f703a80de6dc16e883b780bb6bbb909a0",
+      "windows_arm64": "703ea8d4b12d54485d53364d065d9328d5572ab1ae82653b314c5fe787050a47"
+    }
   }
 }
